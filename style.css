@@ -12,7 +12,7 @@ html, body {
 
 :root {
     /*--base-color: #fdf9f4; previous base colour*/
-    --base-color: #EDD9B7;
+    --base-color: #fefaf4;
     --text-color: #a6886b;
     --primary-color: #F6C29B;
     --secondary-color: #9DC1C9;
@@ -94,6 +94,7 @@ nav img {
 }
 .sidebar li{
   width: 100%;
+  margin-bottom: 0.8rem;
 }
 .sidebar a{
   width: 100%;
@@ -140,7 +141,7 @@ section { scroll-margin-top: 80px; }
   } 
 
   .contact h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
 /*Breakpoint for Tablet/large mobile*/
@@ -159,7 +160,7 @@ section { scroll-margin-top: 80px; }
   }
   
   section h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
 }
@@ -189,7 +190,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 p {
@@ -201,7 +202,7 @@ p {
 }
 
 section {
-  background-color: var(--tertiary-color);
+  background-color: var(--base-color);
   margin: 4rem auto;
   border-radius: 4rem;
   width: 100%;
@@ -375,8 +376,8 @@ details:hover {
 }
 
 .scroller-inner img {
-  width: clamp(120px, 20vw, 250px);
-  height: clamp(120px, 20vw, 250px);
+  width: clamp(200px, 40vw, 250px);
+  height: clamp(200px, 40vw, 250px);
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -436,8 +437,8 @@ section#gallery .text-container {
 .insta-button {
   display: block;
   width: fit-content;
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background-color: var(--secondary-color);
+  color: var(--base-color);
   text-decoration: none;
   text-align: center;
   padding: 1rem;
@@ -579,7 +580,7 @@ section#gallery .text-container {
     .image-container-about {
         flex: none; 
         width: 100%;
-        max-width: 80%;
+        max-width: 100%;
         padding-top: 0;
     }
 
@@ -587,6 +588,78 @@ section#gallery .text-container {
         order: -1;
         margin-bottom: 20px;
     }
+}
+
+#about .text-container-about {
+  max-width: 680px;
+}
+
+.about-highlights {
+  margin: 1rem 0 1.25rem;
+  padding-left: 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-highlights strong {
+  font-weight: 700;
+}
+
+.about-details {
+  padding: 0;
+  border: none;
+  font-size: 1rem;
+}
+
+.about-details summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem 1rem;
+  border-radius: .75rem;
+  background: rgba(246, 194, 155, 0.25);
+  font-weight: 600;
+}
+
+.about-details summary::-webkit-details-marker { display: none; }
+
+.about-details[open] summary {
+  background: rgba(157, 193, 201, 0.25);
+}
+
+.about-body {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .text-container-about,
+  .image-container-about {
+    max-width: 100% !important;
+  }
+
+  #about p, 
+  #about .about-body {
+    font-size: 1rem;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+}
+
+@media (max-width: 768px) {
+  #pricing-operating-area {
+    max-width: 100% !important;
+  }
+}
+
+#pricing-operating-area p {
+  font-size: 1rem;
 }
 
 .photo-menu-grid {
@@ -637,6 +710,7 @@ section#gallery .text-container {
   width: 100%;
   height: 100%; 
   object-fit: cover;
+  object-position: top;
   display: block;
 }
 
@@ -731,7 +805,6 @@ section#faq {
   border-radius: 2.5rem;
   padding: 2rem 1rem;
   margin-bottom: 4rem;
-  box-shadow: 0 4px 24px -12px rgba(0, 0, 0, 0.09);
 }
 
 section#faq .flex-container {
@@ -774,7 +847,7 @@ section#faq details:hover, section#faq details[open] {
 
 section#faq summary {
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 1.13rem;
   display: flex;
   align-items: center;
@@ -823,6 +896,10 @@ section#faq details p {
   }
 }
 
+.jp-title {
+  margin-bottom: 1rem;
+}
+
 footer {
   margin-top: 2rem;
   padding-bottom: 1.5rem;
@@ -844,4 +921,45 @@ footer {
 
 .socials-container a:hover {
   transform: rotate(25deg);
+}
+
+/* --- Back to Top Floating Button --- */
+#backToTop {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(157, 193, 201, 0.9); /* matches your palette */
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;              /* hidden by default */
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover (desktop only) */
+#backToTop:hover {
+  transform: translateY(-2px);
+}
+
+/* Show button */
+#backToTop.show {
+  display: block;
+}
+
+/* Slightly larger on mobile tap targets */
+@media (max-width: 768px) {
+  #backToTop {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+    bottom: 16px;
+    right: 16px;
+  }
 }
