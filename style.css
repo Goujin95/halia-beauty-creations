@@ -30,22 +30,6 @@ html, body {
   overflow-x: hidden;
 }
 
-body {
-  scroll-behavior: smooth;
-  background-color: var(--base-color);  
-  background-image: 
-    url('/images/topLeftIcon2.png'), 
-    url('/images/topRightIcon2.png'); 
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  
-  background-position: 
-    left -2rem top 20px,
-    right -2rem top 20px;
-    
-  background-size: 25vw auto, 25vw auto;
-}
-
 :root {
     --base-color: #fefaf4;
     --text-color: #a6886b;
@@ -408,6 +392,71 @@ section .scroller {
 .slogan-two .slogan-animate {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 600;
+}
+
+.slogan-two {
+  width: 100%;
+  padding: 6rem 1.5rem;
+  background-color: var(--base-color); /* 既存の薄いベージュ背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.slogan-container-two {
+  width: 100%;
+  max-width: 950px; /* 横幅を十分に広げて、文章が途中で詰まらないように拡張 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.slogan-two .text-container {
+  width: 100%;
+  text-align: center;
+}
+
+.slogan-two h1.slogan-animate {
+  font-family: var(--font-japanese-heading);
+  color: var(--text-color); /* メインのブラウン系テキストカラー */
+  font-size: 1.65rem;
+  font-weight: 500;
+  line-height: 2.2; /* 行間をゆったりと持たせ、美しい文字組みに */
+  letter-spacing: 0.1em;
+  margin: 0;
+  
+  /* ─── 日本語の改行コントロール ─── */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  display: inline-block;
+  width: 100%;
+}
+
+/* 役職・お名前部分（Mona）のフォントサイズや余白の微調整 */
+.slogan-two h1.slogan-animate br + br,
+.slogan-two h1.slogan-animate br {
+  content: "";
+  margin-top: 1rem;
+  display: block;
+}
+
+/* ==========================================================================
+   Responsive Viewports (Mobile & Tablet)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .slogan-two {
+    padding: 4.5rem 1rem;
+  }
+
+  .slogan-container-two {
+    width: 95%; /* スマホ画面の左右いっぱいに使えるように調整 */
+  }
+
+  .slogan-two h1.slogan-animate {
+    line-height: 2;
+    letter-spacing: 0.05em;
+  }
 }
 
 section .flex-container {
