@@ -30,22 +30,20 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const slogan = document.querySelector('.slogan-animate');
-  if (!slogan) return;
+  const slogans = document.querySelectorAll('.slogan-animate'); // Select all slogans
+  if (slogans.length === 0) return;
 
-  function onScroll() {
-    const rect = slogan.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.8) {
-      slogan.classList.add('visible');
-      window.removeEventListener('scroll', onScroll);
-    }
-  }
+  const sloganObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        sloganObserver.unobserve(entry.target); // Stop observing once visible
+      }
+    });
+  }, { threshold: 0.2 }); // Triggers when 20% of the element is visible
 
-  window.addEventListener('scroll', onScroll);
-  // Also trigger in case already in view
-  onScroll();
+  slogans.forEach((slogan) => sloganObserver.observe(slogan));
 });
-
 document.addEventListener('DOMContentLoaded', () => {
   const logo = document.querySelector('.logo');
   setTimeout(() => {
@@ -108,4 +106,102 @@ document.addEventListener("DOMContentLoaded", () => {
   modal.addEventListener("click", (e) => {
     if (e.target === modal) modal.style.display = "none";
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTop = document.getElementById("backToTop");
+  if (!backToTop) return; // prevents errors if button missing
+
+  // Show button after scrolling down
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  // Smooth scroll to top
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
+
+// Vertical Gallery Left-Side Progress Indicator Tracking
+document.addEventListener("DOMContentLoaded", () => {
+  const viewport = document.querySelector(".gallery-viewport");
+  const progressBar = document.getElementById("galleryProgressBar");
+
+  if (!viewport || !progressBar) return;
+
+viewport.addEventListener("scroll", () => {
+  const scrollTop = viewport.scrollTop;
+  const clientHeight = viewport.clientHeight;
+  const scrollHeight = viewport.scrollHeight;
+  
+  const totalScrollableDistance = scrollHeight - clientHeight;
+  
+  if (totalScrollableDistance > 0) {
+    let scrollPercentage = (scrollTop / totalScrollableDistance) * 100;
+    
+    // Safety Threshold: If we are within 2px of the absolute bottom, top it off to 100%
+    if (scrollHeight - scrollTop - clientHeight <= 2) {
+      scrollPercentage = 100;
+    }
+    
+    // Update your progress bar height property smoothly
+    progressBar.style.height = `${scrollPercentage}%`;
+  }
+});
+});
+
+// Gallery Click-to-Enlarge Lightbox Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryImages = document.querySelectorAll(".grid-container img");
+  const lightbox = document.getElementById("galleryLightbox");
+  const lightboxImg = document.getElementById("lightboxImage");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  if (!lightbox || !lightboxImg) return;
+
+  // Open full uncropped image on click
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  // Close when clicking the "X"
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  }
+
+  // Close when clicking outside the main image box
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".main-slideshow .slide");
+  if (slides.length === 0) return;
+
+  let currentSlide = 0;
+  const slideInterval = 4000; // Rotates frames every 4 seconds
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
+
+  setInterval(nextSlide, slideInterval);
 });
