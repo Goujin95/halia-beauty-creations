@@ -3,48 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halia Beauty Creations</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Halia Beauty Creations Home | Photography, Salon & Craft</title>
+    <link rel="stylesheet" href="css/main.css">
     <script src="main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
-
-<button id="backToTop" aria-label="Back to top">↑</button>
-
 <body>
+
+<!--<button id="backToTop" aria-label="Back to top">↑</button>-->
+
+<a href="#booking-form" class="floating-cta">
+    <span class="cta-text">ご予約はこちら</span>
+  </a>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo.png" alt="Halia Beauty Creations Logo" class="brand-logo">
+    </a>
   <nav>
-    <a href="#" class="nav-brand">Halia Beauty Creations</a>
     <ul class="sidebar">
       <li onclick=hideSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-      <li lang="en"><a href="#menu">Menu<br>撮影メニュー</a></li>
-      <!--<li lang="en"><a href="#services">Services<br>サービス内容</a></li>-->
-      <li lang="en"><a href="#calendar">Calendar<br>カレンダー</a></li>
-      <li lang="en"><a href="#pricing-operating-area">Pricing & Operating Area<br>料金・出張エリア</a></li>
-      <li lang="en"><a href="#about">About<br>自己紹介</a></li>
-      <li lang="en"><a href="#gallery">Gallery<br>ギャラリー</a></li>
-      <li lang="en"><a href="#faq">FAQ<br>よくある質問</a></li>
-      <li lang="en"><a href="#booking-form">Booking Form<br>予約フォーム</a></li>
-      <li lang="en"><a href="#tsumami-zaiku">Tsumami Zaiku<br>つまみ細工</a></li>
-      <li lang="en"><a href="#contact">Contact<br>お問い合わせ</a></li>
+      <li><a href="index.html" class="active">トップ</a></li>
+      <li><a href="#services">サービス一覧</a></li>
+      <li><a href="#gallery">ギャラリー</a></li>
+      <li><a href="#about">オーナー紹介</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+      <li><a href="#calendar">カレンダー</a></li>
+      <li><a href="#booking-form">ご予約</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
     </ul>
     <ul>
-      <li lang="en" class="hideOnMobile"><a href="#menu">Menu<br>撮影メニュー</a></li>
-      <!--<li lang="en" class="hideOnMobile"><a href="#services">Services<br>サービス内容</a></li>-->
-      <li lang="en" class="hideOnMobile"><a href="#calendar">Calendar<br>カレンダー</a></li>
-      <li lang="en" class="hideOnMobile"><a href="#pricing-operating-area">Pricing & Operating Area<br>料金・出張エリア</a></li>
-      <li lang="en" class="hideOnMobile"><a href="#about">About<br>自己紹介 </a></li>
-      <li lang="en" class="hideOnMobile"><a href="#gallery">Gallery<br>ギャラリー</a></li>
-      <li lang="en" class="hideOnMobile"><a href="#faq">FAQ<br>よくある質問</a></li>
-      <li lang="en" class="hideOnMobile"><a href="#booking-form">Booking Form<br>予約フォーム</a></li>
-      <li lang="en" class="hideOnMobile"><a href="#tsumami-zaiku">Tsumami Zaiku<br>つまみ細工</a></li>
-      <li lang="en" class="hideOnMobile"><a href="#contact">Contact<br>お問い合わせ</a></li>
-      <li lang="en" class="menu-button" onclick=showSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+      <li class="hideOnMobile"><a href="index.html" class="active">トップ</a></li>
+      <li class="hideOnMobile"><a href="#services">サービス一覧</a></li>
+      <li class="hideOnMobile"><a href="#gallery">ギャラリー</a></li>
+      <li class="hideOnMobile"><a href="#about">オーナー紹介</a></li>
+      <li class="hideOnMobile"><a href="#faq">よくある質問</a></li>
+      <li class="hideOnMobile"><a href="#calendar">カレンダー</a></li>
+      <li class="hideOnMobile"><a href="#booking-form">ご予約</a></li>
+      <li class="hideOnMobile"><a href="#contact">お問い合わせ</a></li>
+      <li class="menu-button" onclick=showSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
     </ul>
   </nav>
+  </div>
+  </header>
 
+<main>
 <div class="hero-container">
   <!-- Full Width Slideshow -->
   <div class="main-slideshow">
@@ -74,20 +81,76 @@
 <section class="slogan-two">
     <div class="slogan-container-two">
       <div class="text-container">
-        <h1 class="slogan-animate"><br><br>撮られる側の気持ちに寄り添った<br> 優しい撮影を大切にしています <br><br>美容師フォトグラファー　Mona</h1>
+        <h1 class="slogan-animate">
+          撮られる側の<wbr>
+          気持ちに<wbr>
+          寄り添った<wbr>
+          優しい撮影を<wbr>
+          大切に
+          <br><br>
+          美容師<wbr>
+          フォトグラファー<wbr>
+          Mona</h1>
          </div>
       </div>
 </section>
+
+<section id="services" class="section section-alt">
+  <div class="container">
+    <div class="section-title">
+      <h2>サービス案内</h2>
+      <p>撮影、ヘアケア、伝統工芸のつまみ細工をご案内いたします。</p>
+    </div>
+
+    <div class="services-grid">
+
+      <a href="photography.html" class="service-card">
+        <div class="card-image">
+          <img src="images/photography-thumbnail.jpg" alt="出張撮影">
+        </div>
+        <div class="card-content">
+          <h3>スタジオ＆出張撮影</h3>
+          <p>アットホームなスタジオでの撮影を中心に、ベビーフォトやご希望の場所への出張撮影も承っております。</p>
+          <span class="card-link">プラン・詳細を見る &rarr;</span>
+        </div>
+      </a>
+
+      <a href="salon.html" class="service-card">
+        <div class="card-image">
+          <img src="images/menu-thumbnail.jpg" alt="ヘアサロン">
+        </div>
+        <div class="card-content">
+          <h3>ヘアサロン</h3>
+          <p>一人ひとりのライフスタイルに合わせたヘアカット、スタイリング、髪質改善ケア。</p>
+          <span class="card-link">メニュー・料金を見る &rarr;</span>
+        </div>
+      </a>
+
+      <a href="tsumami-zaiku.html" class="service-card japanese-card">
+        <div class="card-image">
+          <img src="images/tsumami-zaiku-thumbnail.jpg" alt="つまみ細工教室">
+        </div>
+        <div class="card-content">
+          <h3>つまみ細工</h3>
+          <p>オーダーメイドの髪飾り・アクセサリー、体験レッスン、夜間教室のご案内。</p>
+          <span class="card-link">プラン・レッスン詳細を見る &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+  </main>
 
 <div class="divider-container hidden">
   <img class="decor-divider" src="images/centerBanner3.png" alt="">
 </div>
 
-
+<!--
 <section id="menu" class="hidden">
       <div class="flex-container">
         <div class="text-container">
-          <h2 lang="en">Menu<br>メニュー</h2>
+          <h2>Menu<br>メニュー</h2>
           </div>
           <div class="photo-menu-grid">
       
@@ -156,12 +219,12 @@
 
 <div class="divider-container hidden">
   <img class="decor-divider" src="images/bottle.png" alt="">
-</div>
+</div> -->
 
 <section id="calendar" class="hidden">
       <div class="flex-container">
         <div class="text-container">
-          <h2 lang="en">Calendar<br>カレンダー</h2>
+          <h2>Calendar<br>カレンダー</h2>
           <div class="calendar-wrapper">  
           <iframe 
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FTokyo&showPrint=0&title=Events&src=YWxleGFuZGVyZmlubGV5MThAZ21haWwuY29t&color=%238e24aa" 
@@ -176,16 +239,17 @@
 <div class="divider-container hidden">
   <img class="decor-divider" src="images/flower.png" alt="">
 </div>
+</section>
 
-  <section id="pricing-operating-area" class="hidden">
+<!--
+<section id="pricing-operating-area" class="hidden">
       <div class="flex-container">
         <div class="text-container">
-          <h2 lang="en">Pricing<br>料金</h2>
+          <h2>Pricing<br>料金</h2>
           <h3>Coming Soon</h3><br><br>
-          <h2 lang="en">Operating Area<br>出張エリア</h2>
+          <h2>Operating Area<br>出張エリア</h2>
           <p>
-            群馬県内を中心に出張（前橋市・高崎市・ 伊勢崎市・太田市など） ※その他地域はご相談ください。 
-            ※施術費用はお問い合わせください。（お見積もり額を出させていただきます。）
+          <br>群馬県内を<wbr>中心に出張<br><br>※その他地域は<wbr>ご相談ください
           </p>
         </div>
       </div>
@@ -193,12 +257,12 @@
 
 <div class="divider-container hidden">
   <img class="decor-divider" src="images/shell.png" alt="">
-</div>
+</div> -->
 
 <section id="about" class="hidden">
   <div class="flex-container-about">
     <div class="text-container-about">
-      <h2 lang="en">About<br>自己紹介</h2>
+      <h2>About<br>オーナー紹介</h2>
 
       <ul class="about-highlights">
         <li><strong>美容室勤務4年</strong>：カット・カラー・パーマ・ヘアセット</li>
@@ -322,8 +386,7 @@
     <span>Instagram</span>
   </a>
 </div>
-
-    </section>
+</section>
 
 
 <div class="divider-container hidden">
@@ -333,7 +396,7 @@
 <section id="faq" class="hidden">
       <div class="flex-container">
         <div class="text-container">
-          <h2 lang="en">Frequently Asked Questions<br>よくある質問</h2>
+          <h2>Frequently Asked Questions<br>よくある質問</h2>
             <details>
               <summary>Q. 出張エリアはどこまで可能ですか？</summary>
               <p>A. 群馬県内を中心に出張しています。県外をご希望の方はご相談ください。</p>
@@ -363,26 +426,67 @@
   <img class="decor-divider" src="images/shell.png" alt="">
 </div>
 
-<section id="booking-form" class="hidden">
-      <div class="flex-container">
-        <div class="text-container">
-          <h2 lang="en">Booking Form</h2>
-          <h3 class="jp-title">予約フォーム</h3>
-          <p>Coming Soon</p>
+<section id="booking-form" class="booking-section hidden">
+  <div class="booking-container">
+    <div class="booking-header">
+      <h2>Booking</h2>
+      <h3 class="jp-title">ご予約・お問い合わせ</h3>
+      <p class="booking-subtext">
+        ご予約やお問い合わせは、LINE公式アカウントまたはInstagramのDMより承っております。<br>
+        お気軽にご連絡ください。
+      </p>
+    </div>
+
+    <div class="booking-buttons">
+      <!-- LINE Booking Button -->
+      <a href="https://line.me/R/ti/p/@394sidir" target="_blank" rel="noopener noreferrer" class="booking-card line-card">
+        <div class="card-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="booking-icon">
+            <path fill="#00c300" d="M12.5,42h23c3.59,0,6.5-2.91,6.5-6.5v-23C42,8.91,39.09,6,35.5,6h-23C8.91,6,6,8.91,6,12.5v23C6,39.09,8.91,42,12.5,42z"/>
+            <path fill="#fff" d="M37.113,22.417c0-5.865-5.88-10.637-13.107-10.637s-13.108,4.772-13.108,10.637c0,5.258,4.663,9.662,10.962,10.495c0.427,0.092,1.008,0.282,1.155,0.646c0.132,0.331,0.086,0.85,0.042,1.185c0,0-0.153,0.925-0.187,1.122c-0.057,0.331-0.263,1.296,1.135,0.707c1.399-0.589,7.548-4.445,10.298-7.611h-0.001C36.203,26.879,37.113,24.764,37.113,22.417z M18.875,25.907h-2.604c-0.379,0-0.687-0.308-0.687-0.688V20.01c0-0.379,0.308-0.687,0.687-0.687c0.379,0,0.687,0.308,0.687,0.687v4.521h1.917c0.379,0,0.687,0.308,0.687,0.687C19.562,25.598,19.254,25.907,18.875,25.907z M21.568,25.219c0,0.379-0.308,0.688-0.687,0.688s-0.687-0.308-0.687-0.688V20.01c0-0.379,0.308-0.687,0.687-0.687s0.687,0.308,0.687,0.687V25.219z M27.838,25.219c0,0.297-0.188,0.559-0.47,0.652c-0.071,0.024-0.145,0.036-0.218,0.036c-0.215,0-0.42-0.103-0.549-0.275l-2.669-3.635v3.222c0,0.379-0.308,0.688-0.688,0.688c-0.379,0-0.688-0.308-0.688-0.688V20.01c0-0.296,0.189-0.558,0.47-0.652c0.071-0.024,0.144-0.035,0.218-0.035c0.214,0,0.42,0.103,0.549,0.275l2.67,3.635V20.01c0-0.379,0.309-0.687,0.688-0.687c0.379,0,0.687,0.308,0.687,0.687V25.219z M32.052,21.927c0.379,0,0.688,0.308,0.688,0.688c0,0.379-0.308,0.687-0.688,0.687h-1.917v1.23h1.917c0.379,0,0.688,0.308,0.688,0.687c0,0.379-0.309,0.688-0.688,0.688h-2.604c-0.378,0-0.687-0.308-0.687-0.688v-2.603c0-0.001,0-0.001,0-0.001c0,0,0-0.001,0-0.001v-2.601c0-0.001,0-0.001,0-0.002c0-0.379,0.308-0.687,0.687-0.687h2.604c0.379,0,0.688,0.308,0.688,0.687s-0.308,0.687-0.688,0.687h-1.917v1.23H32.052z"/>
+          </svg>
         </div>
-      </div>
-    </section>
+        <div class="card-text">
+          <span class="card-title">LINEで予約する</span>
+          <span class="card-subtitle">公式LINEはこちら &rarr;</span>
+        </div>
+        <div class="qr-preview desktop-only">
+          <img src="images/halia-beauty-line-qr-code.png" alt="LINE QR Code">
+        </div>
+      </a>
+
+      <!-- Instagram Booking Button -->
+      <a href="https://www.instagram.com/haliabeautycreations" target="_blank" rel="noopener noreferrer" class="booking-card insta-card">
+        <div class="card-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="booking-icon-svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </div>
+        <div class="card-text">
+          <span class="card-title">Instagram DMで予約</span>
+          <span class="card-subtitle">@haliabeautycreations &rarr;</span>
+        </div>
+        <div class="qr-preview desktop-only">
+          <img src="images/instaQRCode.jpg" alt="Instagram QR Code">
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 
 <div class="divider-container hidden">
   <img class="decor-divider" src="images/centerBanner2.png" alt="">
 </div>
 
+<!--
 <section id="tsumami-zaiku" class="tsumami-section section-animate">
   <div class="tsumami-overlay"></div>
   <div class="tsumami-container">
     <div class="tsumami-header">
       <span class="tsumami-subtitle">伝統工芸ワークショップ</span>
-      <h2>つまみ細工 体験レッスン</h2>
+      <h2>つまみ細工<wbr>体験レッスン</h2>
       <p class="tsumami-jp-title">〜髪飾り・和装小物作りクラス〜</p>
     </div>
     
@@ -397,6 +501,7 @@
     </div>
   </div>
 </section>
+-->
 
   <img src="images/Halia logo photopea edit raster PNG version.png" class="logo" data-speed="-0.25" alt="">
 
@@ -408,7 +513,7 @@
 </svg>
     </a>
 
-<a href="https://line.me/" target="_blank" rel="noopener noreferrer" class="footer-icon-link">
+<a href="https://line.me/R/ti/p/@394sidir" target="_blank" rel="noopener noreferrer" class="footer-icon-link">
 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#00c300" d="M12.5,42h23c3.59,0,6.5-2.91,6.5-6.5v-23C42,8.91,39.09,6,35.5,6h-23C8.91,6,6,8.91,6,12.5v23C6,39.09,8.91,42,12.5,42z"/><path fill="#fff" d="M37.113,22.417c0-5.865-5.88-10.637-13.107-10.637s-13.108,4.772-13.108,10.637c0,5.258,4.663,9.662,10.962,10.495c0.427,0.092,1.008,0.282,1.155,0.646c0.132,0.331,0.086,0.85,0.042,1.185c0,0-0.153,0.925-0.187,1.122c-0.057,0.331-0.263,1.296,1.135,0.707c1.399-0.589,7.548-4.445,10.298-7.611h-0.001C36.203,26.879,37.113,24.764,37.113,22.417z M18.875,25.907h-2.604c-0.379,0-0.687-0.308-0.687-0.688V20.01c0-0.379,0.308-0.687,0.687-0.687c0.379,0,0.687,0.308,0.687,0.687v4.521h1.917c0.379,0,0.687,0.308,0.687,0.687C19.562,25.598,19.254,25.907,18.875,25.907z M21.568,25.219c0,0.379-0.308,0.688-0.687,0.688s-0.687-0.308-0.687-0.688V20.01c0-0.379,0.308-0.687,0.687-0.687s0.687,0.308,0.687,0.687V25.219z M27.838,25.219c0,0.297-0.188,0.559-0.47,0.652c-0.071,0.024-0.145,0.036-0.218,0.036c-0.215,0-0.42-0.103-0.549-0.275l-2.669-3.635v3.222c0,0.379-0.308,0.688-0.688,0.688c-0.379,0-0.688-0.308-0.688-0.688V20.01c0-0.296,0.189-0.558,0.47-0.652c0.071-0.024,0.144-0.035,0.218-0.035c0.214,0,0.42,0.103,0.549,0.275l2.67,3.635V20.01c0-0.379,0.309-0.687,0.688-0.687c0.379,0,0.687,0.308,0.687,0.687V25.219z M32.052,21.927c0.379,0,0.688,0.308,0.688,0.688c0,0.379-0.308,0.687-0.688,0.687h-1.917v1.23h1.917c0.379,0,0.688,0.308,0.688,0.687c0,0.379-0.309,0.688-0.688,0.688h-2.604c-0.378,0-0.687-0.308-0.687-0.688v-2.603c0-0.001,0-0.001,0-0.001c0,0,0-0.001,0-0.001v-2.601c0-0.001,0-0.001,0-0.002c0-0.379,0.308-0.687,0.687-0.687h2.604c0.379,0,0.688,0.308,0.688,0.687s-0.308,0.687-0.688,0.687h-1.917v1.23H32.052z"/></svg>
 </a>
   </div>
@@ -417,5 +522,18 @@
   <span class="lightbox-close">&times;</span>
   <img class="lightbox-content" id="lightboxImage" src="" alt="Full View">
 </div>
+
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  }
+</script>
 </body>
 </html>

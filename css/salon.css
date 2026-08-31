@@ -1,0 +1,252 @@
+/* --- Page Hero Header --- */
+.salon-hero {
+  color: #a6886b;
+  text-align: center;
+  padding: 100px 20px 80px;
+}
+
+.salon-hero {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: #a6886b;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.salon-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+/* --- Brochure Download Section --- */
+.brochure-cta-section {
+  padding: 30px 20px;
+}
+
+.brochure-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--primary-color, #2c3e50);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-download:hover {
+  background-color: #1a252f;
+}
+
+/* --- Pricing Cards & Layout --- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.price-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.price-card .card-header {
+  background: #f8fafc;
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.price-card .card-header h3 {
+  margin: 0;
+  color: var(--primary-color, #2c3e50);
+  font-size: 1.25rem;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.price-list li:last-child {
+  border-bottom: none;
+}
+
+.item-info {
+  padding-right: 15px;
+}
+
+.item-name {
+  display: block;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.item-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.item-price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--accent-color, #d98880);
+  white-space: nowrap;
+  font-family: 'Noto Serif JP', serif;
+}
+
+/* --- Beach Background Section --- */
+.section-beach-bg {
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
+              url('../images/beach-bg.jpg') center/cover no-repeat fixed;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.glass-content-box {
+  max-width: 650px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-content-box h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.glass-content-box p {
+  margin-bottom: 25px;
+  color: #4a5568;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-color, #d98880);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #c07068;
+}
+
+.color-conditions {
+  font-size: small;
+  margin-top: 1rem;
+}
+
+/* --- Option / Extra Services Card --- */
+.option-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+}
+
+.option-header {
+  background: #f8fafc;
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.option-header h3 {
+  margin: 0;
+  color: var(--primary-color, #2c3e50);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 30px 20px;
+}
+
+.option-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 16px;
+  border-radius: 8px;
+  background-color: #fafbfd;
+  border: 1px dashed #e2e8f0;
+}
+
+.option-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.option-title small {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #64748b;
+}
+
+.option-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--accent-color, #d98880);
+  font-family: 'Noto Serif JP', serif;
+  margin-bottom: 6px;
+}
+
+.option-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Adjustments for mobile screens */
+@media screen and (max-width: 600px) {
+  .option-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px 15px;
+  }
+}

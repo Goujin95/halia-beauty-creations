@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tsumami Zaiku Craft Workshops | Halia Beauty Creations</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/tsumami.css">
+  <script src="main.js"></script>
+</head>
+<body>
+
+  <!-- Floating Book Now Button -->
+  <a href="index.html#booking" class="floating-cta">
+    <span class="cta-text">ご予約はこちら</span>
+  </a>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo.png" alt="Halia Beauty Creations Logo" class="brand-logo">
+    </a>
+
+ <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="index.html#services">サービス一覧</a></li>
+      <li><a href="photography.html">フォトスタジオ</a></li>
+      <li><a href="salon.html">ヘアサロン</a></li>
+      <li><a href="tsumami-zaiku.html" class="active">つまみ細工</a></li>
+      <li><a href="index.html#gallery">ギャラリー</a></li>
+      <li><a href="index.html#about">オーナー紹介</a></li>
+      <li><a href="index.html#faq">よくある質問</a></li>
+      <li><a href="index.html#calendar">カレンダー</a></li>
+      <li><a href="index.html#booking-form">ご予約</a></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
+    </ul>
+  <nav>
+    <ul>
+      <li class="hideOnMobile"><a href="index.html">トップ</a></li>
+      <li class="hideOnMobile"><a href="index.html#services">サービス一覧</a></li>
+      <li class="hideOnMobile"><a href="photography.html">フォトスタジオ</a></li>
+      <li class="hideOnMobile"><a href="salon.html">ヘアサロン</a></li>
+      <li class="hideOnMobile"><a href="tsumami-zaiku.html" class="active">つまみ細工</a></li>
+      <li class="hideOnMobile"><a href="index.html#gallery">ギャラリー</a></li>
+      <li class="hideOnMobile"><a href="index.html#about">オーナー紹介</a></li>
+      <li class="hideOnMobile"><a href="index.html#faq">よくある質問</a></li>
+      <li class="hideOnMobile"><a href="index.html#calendar">カレンダー</a></li>
+      <li class="hideOnMobile"><a href="index.html#booking-form">ご予約</a></li>
+      <li class="hideOnMobile"><a href="index.html#contact">お問い合わせ</a></li>
+      <li class="menu-button" onclick=showSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero tsumami-hero">
+      <div class="hero-overlay">
+        <div class="container">
+          <h1>つまみ細工</h1>
+        </div>
+      </div>
+    </section>
+
+<!-- Brochure Download Section -->
+    <section class="section brochure-cta-section">
+      <div class="container">
+        <div class="brochure-header text-center">
+          <h3>案内資料のダウンロード (PDF)</h3>
+        </div>
+
+        <div class="brochure-grid">
+          <!-- Card 1: Experience / Trial Lesson -->
+          <div class="brochure-card">
+            <div class="brochure-card-content">
+              <span class="brochure-tag">初回限定</span>
+              <h4>体験レッスン案内</h4>
+              <p>月・木 19:00〜21:00 開催。手ぶらで参加できる1回限定の体験レッスン詳細です。</p>
+            </div>
+            <a href="assets/tsumami-zaiku-taiken-ressun.pdf" download class="btn-download">
+            体験レッスン案内 (PDF)
+            </a>
+          </div>
+
+          <!-- Card 2: Regular Night Class (4x/month) -->
+          <div class="brochure-card brochure-card-night">
+            <div class="brochure-card-content">
+              <span class="brochure-tag tag-night">月4回コース</span>
+              <h4>夜のつまみ細工教室</h4>
+              <p>月・木 19:00〜21:00 開催。少人数制（3名限定）で自分のペースで学べる定期教室のご案内です。</p>
+            </div>
+            <a href="assets/yoru-no-tsumami-zaiku-kyoushitsu.pdf" download class="btn-download btn-download-night">
+             定期教室案内 (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing / Course Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-title">
+          <h2>レッスン・料金</h2>
+          <p>高崎市内のアットホームな空間で開催中。少人数制（最大3名）で丁寧にサポートします。</p>
+        </div>
+
+        <div class="pricing-grid two-card-grid">
+          
+          <!-- Trial Card -->
+          <div class="price-card">
+            <div class="card-header">
+              <h3>体験レッスン</h3>
+              <p class="card-subtitle">はじめての方・まずは試してみたい方に（お一人様1回限り）</p>
+            </div>
+            <div class="price-badge-header">
+              <span class="price-main">¥3,000</span>
+              <span class="price-sub">/ 1回（材料費込み）</span>
+            </div>
+            <ul class="package-features">
+              <li><strong>開催日時:</strong> 月曜日・木曜日 19:00〜21:00（約2時間）</li>
+              <li><strong>定員:</strong> 少人数制（3名限定）</li>
+              <li><strong>制作アイテム:</strong> 簡単で可愛いお花を1つ制作</li>
+              <li><strong>持ち物:</strong> 手ぶらOK（道具・材料はすべてご用意）</li>
+              <li><strong>対象:</strong> 初心者の方・お子様連れの方歓迎</li>
+            </ul>
+          </div>
+
+          <!-- Regular 4x Course Card -->
+          <div class="price-card featured-card">
+            <div class="card-header">
+              <h3>夜のつまみ細工教室</h3>
+              <p class="card-subtitle">趣味としてじっくり学びたい方向け（月4回コース）</p>
+            </div>
+            <div class="price-badge-header">
+              <span class="price-main">¥12,000</span>
+              <span class="price-sub">/ 月 (月4回)</span>
+            </div>
+            <ul class="package-features">
+              <li><strong>開催日時:</strong> 月曜日・木曜日 19:00〜21:00（約2時間）</li>
+              <li><strong>定員:</strong> 少人数制（3名限定）</li>
+              <li><strong>内容:</strong> 丸つまみ・剣つまみの基本、道具の選び方、個別指導</li>
+              <li><strong>材料費:</strong> 別途（初回道具セット 約¥1,500 ※持参も可）</li>
+              <li><strong>特徴:</strong> お好きな作品を自分のペースで作れます</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  }
+</script>
+
+</body>
+</html>

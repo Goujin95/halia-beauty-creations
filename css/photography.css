@@ -1,0 +1,141 @@
+/* --- Hero Banner --- */
+.photo-hero {
+  color: #a6886b;
+  text-align: center;
+  padding: 100px 20px 80px;
+}
+
+.photo-hero .sub-heading {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: black;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.photo-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+/* --- Featured Card Styling (Growth Record Plan) --- */
+.featured-card {
+  position: relative;
+  border: 2px solid var(--accent-color, #d98880) !important;
+  transform: scale(1.02);
+}
+
+.featured-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--accent-color, #d98880);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-bottom-left-radius: 8px;
+  text-transform: uppercase;
+}
+
+.extra-features {
+  display: inline-block;
+  background-color: #ed9596; /* Soft blue-grey matching your "ご予約はこちら" button */
+  color: #ffffff !important;
+  border-radius: 50px; /* Rounded pill shape */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 4px 20px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.price-badge-header {
+  padding: 15px 20px;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.price-main {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color, #2c3e50);
+}
+
+.card-header{
+  font-size: 2rem;
+}
+
+.plan-one {
+  color: #ed9596;
+}
+
+.plan-two {
+  color: #a0ab87;
+}
+
+.plan-three {
+  color: #dba855;
+}
+
+.card-header .small-title {
+  font-size: 0.6em;
+  font-weight: normal;
+  margin-left: 2px;
+}
+
+/* Targets the tax text inside the price span */
+.price-main .tax-text {
+  font-size: 0.6em;
+  font-weight: normal;
+  margin-left: 2px;
+}
+
+/* --- Package Feature List --- */
+.package-features {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.package-features li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #e2e8f0;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.package-features li:last-child {
+  border-bottom: none;
+}
+
+/* --- Full-Bleed Photo Background Section --- */
+.section-photo-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
+              url('../images/photo-accent-bg.jpg') center/cover no-repeat fixed;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  margin-top: 2rem;
+  background-color: #9cbcc4; /* Soft blue-grey matching your "ご予約はこちら" button */
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px; /* Rounded pill shape */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}

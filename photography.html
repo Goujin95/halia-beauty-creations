@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Studio & Location Photography | Halia Beauty Creations</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/photography.css">
+  <script src="main.js"></script>
+</head>
+<body>
+
+  <!-- Floating Book Now Button -->
+  <a href="index.html#booking" class="floating-cta">
+    <span class="cta-text">ご予約はこちら</span>
+  </a>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo.png" alt="Halia Beauty Creations Logo" class="brand-logo">
+    </a>
+      <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="index.html#services">サービス一覧</a></li>
+      <li><a href="photography.html" class="active">フォトスタジオ</a></li>
+      <li><a href="salon.html">ヘアサロン</a></li>
+      <li><a href="tsumami-zaiku.html">つまみ細工</a></li>
+      <li><a href="index.html#gallery">ギャラリー</a></li>
+      <li><a href="index.html#about">オーナー紹介</a></li>
+      <li><a href="index.html#faq">よくある質問</a></li>
+      <li><a href="index.html#calendar">カレンダー</a></li>
+      <li><a href="index.html#booking-form">ご予約</a></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
+    </ul>
+    <ul>
+      <li class="hideOnMobile"><a href="index.html">トップ</a></li>
+      <li class="hideOnMobile"><a href="index.html#services">サービス一覧</a></li>
+      <li class="hideOnMobile"><a href="photography.html" class="active">フォトスタジオ</a></li>
+      <li class="hideOnMobile"><a href="salon.html">ヘアサロン</a></li>
+      <li class="hideOnMobile"><a href="tsumami-zaiku.html">つまみ細工</a></li>
+      <li class="hideOnMobile"><a href="index.html#gallery">ギャラリー</a></li>
+      <li class="hideOnMobile"><a href="index.html#about">オーナー紹介</a></li>
+      <li class="hideOnMobile"><a href="index.html#faq">よくある質問</a></li>
+      <li class="hideOnMobile"><a href="index.html#calendar">カレンダー</a></li>
+      <li class="hideOnMobile"><a href="index.html#booking-form">ご予約</a></li>
+      <li class="hideOnMobile"><a href="index.html#contact">お問い合わせ</a></li>
+      <li class="menu-button" onclick=showSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sub-page Hero Banner -->
+    <section class="page-hero photo-hero">
+      <div class="hero-overlay">
+        <div class="container">
+          <h1>撮影プラン・料金</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brochure Quick-Download Banner -->
+    <section class="section brochure-cta-section">
+      <div class="container brochure-flex">
+        <div class="brochure-text">
+          <h3>詳しいメニューをご覧になりたい方へ</h3>
+          <p>価格一覧や各種のプランを掲載した撮影パンフレット（PDF）をご覧いただけます。</p>
+        </div>
+        <a href="assets/seicho-kiroku-puran.pdf" download class="btn-download">
+          撮影パンフレットをダウンロード (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- Main Packages / Pricing Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-title">
+          <h2>プラン一覧</h2>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- プラン 1: スタジオ撮影 -->
+          <div class="price-card">
+            <div class="card-header">
+              <h3 class="plan-one">Ohana <span class="small-title">オハナプラン</span></h3>
+              <p class="card-subtitle">大切な節目を残すプラン</p>
+            </div>
+            <div class="price-badge-header">
+              <span class="price-main">55,000円<span class="tax-text">（税込み）</span></span>
+            </div>
+            <ul class="package-features">
+              <li><strong>撮影回数:</strong> 3回</li>
+              <li>生後1ヶ月</li>
+              <li>ハーフバースデー（6ヶ月）</li>
+              <li>1歳バースデー</li>
+              <li><strong>お渡し内容:</strong> 各5カット保証（合計15カット以上）</li>
+              <li>1ヶ月目手形・足形</li>
+              <li>1歳時手形・足形</li>
+              <li>成長記録ボード付き</li>
+            </ul>
+          </div>
+
+          <!-- プラン 2: 成長記録プラン (イチオシ) -->
+          <div class="price-card featured-card">
+            <div class="featured-tag">人気NO.1</div>
+            <div class="card-header">
+              <h3 class="plan-two">Halia<span class="small-title">ハリアプラン</span></h3>
+              <p class="card-subtitle">毎月の成長をしっかり残す人気プラン</p>
+            </div>
+            <div class="price-badge-header">
+              <span class="price-main">132,000円<span class="tax-text">（税込み）</span></span>
+            </div>
+            <ul class="package-features">
+              <li><strong>撮影回数:</strong> 12回</li>
+              <li>１~12ヶ月毎月撮影</li>
+              <li>6ヶ月ハーフバースデー</li>
+              <li>12ヶ月バースデー</li>
+              <li><strong>お渡し内容:</strong> 各8カット保証（合計96カット以上）</li>
+              <li>1ヶ月目手形・足形</li>
+              <li>1歳時手形・足形</li>
+              <li>成長記録ボード付き</li>
+            </ul>
+          </div>
+
+          <!-- プラン 3: 出張・ロケーション撮影 -->
+          <div class="price-card">
+            <div class="card-header">
+              <h3 class="plan-three">Keiki<span class="small-title">ケイキプラン</span></h3>
+              <p class="card-subtitle">赤ちゃんの成長をトータルで残す特別プラン</p>
+            </div>
+            <div class="price-badge-header">
+              <span class="price-main">165,000円<span class="tax-text">（税込み）</span></span>
+            </div>
+            <ul class="package-features">
+              <li><strong>撮影回数:</strong> 12回</li>
+              <li>１~12ヶ月毎月撮影</li>
+              <li>6ヶ月ハーフバースデー</li>
+              <li>12ヶ月バースデー</li>
+              <li><strong>お渡し内容:</strong> 各10～15カット保証（合計120カット以上）</li>
+              <li>1ヶ月目手形・足形</li>
+              <li>1歳時手形・足形</li>
+              <li>成長記録ボード付き</li>
+            </ul>
+            <ul class="package-features special">
+              <p class="extra-features">さらに</p>
+              <li>ファーストヘアカット</li>
+              <li>記念撮影</li>
+              <li>手形または足形</li>
+              <li>ヘア台紙付き（カットした髪を記念に保管できます）</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- インフォメーション枠 -->
+        <div class="info-callout">
+          <h3>これからの成長も一緒に</h3>
+            <ul class="package-features">
+              <li>お宮参り</li>
+              <li>100日祝い（お食い初め）</li>
+              <li>ハーフバースデー</li>
+              <li>1歳バースデー</li>
+              <li>ファーストヘアカット</li>
+              <li>七五三</li>
+              <span>そのほか、マタニティフォト・家族写真・記念撮影なども承ります。お気軽にご相談ください。</span>
+            </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1826 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yomogi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap');
+@font-face {
+    font-family: 'katyou';
+    src: url('fonts/katyou.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Palisade';
+    src: url('fonts/Palisade.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+*, * ::before, *::after{
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+    --base-color: #fefaf4;
+    --text-color: #a6886b;
+    --primary-color: #F6C29B;
+    --secondary-color: #9DC1C9;
+    --tertiary-color: #fdf9f4;
+    --font-heading: "Cormorant Garamond", serif;
+    --font-japanese-heading: "katyou";
+    --font-body: "Keifont";
+}
+
+
+html {
+    color: var(--text-color);
+}
+
+body {
+  background-color: var(--base-color);
+  font-family: var(--font-japanese-heading);
+  font-weight: 600;
+}
+
+h2 {
+  font-family: var(--font-japanese-heading);
+  font-weight: 800;
+}
+
+nav{
+  background-color: var(--base-color);
+  position: sticky;
+  align-items: center;
+  top: 0;
+  z-index: 9999;
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  height: 50px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.navLogo {
+  margin-right: 25rem;
+}
+
+nav a:hover{
+  background-color: var(--primary-color);
+}
+
+nav img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10%;
+}
+
+/* 3. New Mobile Nav Branding Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; /* Generous padding for desktop look */
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container fix: Removes extra blank vertical space */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px; /* Tightens header height */
+}
+
+/* Stacks text on top, logo underneath */
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  gap: 2px; /* Tight spacing between name and logo */
+}
+
+/* Fixes extra line height from pushing elements down */
+.nav-brand {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #c0917a;
+}
+
+/* Logo sizing */
+.brand-logo {
+  height: 120px; /* Adjust height to fit your logo cleanly */
+  width: auto;
+  object-fit: contain;
+}
+
+nav ul:not(.sidebar) {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Keeps your desktop menu items spaced out neatly next to each other */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 15px 20px; /* Tighter padding for mobile screens */
+  }
+
+  .nav-brand {
+    font-size: 1.8rem; /* Scales down gracefully so it doesn't crowd the hamburger button */
+  }
+}
+
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 9999;
+}
+.sidebar li{
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button {
+  display: none;
+  font-size: 1.1rem;
+}
+
+.sidebar li {
+  display: block;
+  font-size: 1.1rem;
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+
+/* Hero section container */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  aspect-ratio: 1 / 1; /* Keeps the slideshow window a perfect square across all screen widths */
+  overflow: hidden;
+  background-color: var(--base-color);
+}
+
+/* Slideshow base layout */
+.main-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Individual photo styles */
+.main-slideshow .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Guarantees your photography fills the frame perfectly without distortion */
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Clean, smooth cross-fade duration */
+}
+
+/* Active slide states */
+.main-slideshow .slide.active {
+  opacity: 1;
+}
+
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 80px; }
+
+.text-container {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+.image-container {
+    padding-left: 0; 
+    margin-top: 1.5rem;
+  }
+    
+.sidebar {
+    width: 100%;
+  }
+.menu-button, .sidebar li {
+    font-size: 1.1rem;
+  } 
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+/*Breakpoint for Tablet/large mobile*/
+@media (max-width: 800px) {
+
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: list-item;
+  }
+
+  #about .flex-container {
+    padding: 2rem 1rem;
+  }
+  
+
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+    /* ... your modal styles here ... */
+    #instaModal .modal-content {
+      width: 90%;
+    }
+}
+
+.icon {
+    width: 20em;
+    height: auto;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+h1 {
+    font-size: 3.75rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.text-container ul {
+  font-size: 1.5rem;
+}
+
+section {
+  background-color: var(--base-color);
+  margin: 4rem auto;
+  border-radius: 4rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  section {
+    width: calc(100% - 2rem);
+    margin: 2.5rem auto;     
+    border-radius: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    min-width: 0;
+    padding: 0;
+  }
+}
+
+.divider-container :has(.hidden) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  max-width: 850px;
+  min-width: 300px;
+  margin: -5rem auto;
+  transform: scale(1.50); 
+}
+
+.decor-divider {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.decor-divider.welcome-banner {
+   margin-top: 1rem; 
+   margin-bottom: 1rem;
+}
+
+.divider-container.hidden {
+  transform: translateY(20px); 
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: scale(1.50);
+}
+
+.divider-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.decor-icon {
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.50);
+}
+
+.slogan-one, .slogan-two {
+  background-color: var(--base-color);
+}
+
+section .scroller {
+  background-color: var(--base-color);
+}
+
+/* Slogan One - The main hero text */
+.slogan-one .slogan-animate {
+  /* clamp(min, preferred, max) */
+  font-size: clamp(1.8rem, 8vw, 4.5rem); 
+  font-weight: 700; /* Optional: make it bolder to stand out more */
+}
+
+/* Slogan Two - The secondary profile text */
+.slogan-two .slogan-animate {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+.slogan-two {
+  width: 100%;
+  padding: 6rem 1.5rem;
+  background-color: var(--base-color); /* 既存の薄いベージュ背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.slogan-container-two {
+  width: 100%;
+  max-width: 950px; /* 横幅を十分に広げて、文章が途中で詰まらないように拡張 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.slogan-two .text-container {
+  width: 100%;
+  text-align: center;
+}
+
+.slogan-two h1.slogan-animate {
+  font-family: var(--font-japanese-heading);
+  color: var(--text-color); /* メインのブラウン系テキストカラー */
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.2; /* 行間をゆったりと持たせ、美しい文字組みに */
+  letter-spacing: 0.1em;
+  margin: 0;
+  
+  /* ─── 日本語の改行コントロール ─── */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  display: inline-block;
+  width: 100%;
+}
+
+/* 役職・お名前部分（Mona）のフォントサイズや余白の微調整 */
+.slogan-two h1.slogan-animate br + br,
+.slogan-two h1.slogan-animate br {
+  content: "";
+  margin-top: 1rem;
+  display: block;
+}
+
+/* ==========================================================================
+   Responsive Viewports (Mobile & Tablet)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .slogan-two {
+    padding: 4.5rem 1rem;
+  }
+
+  .slogan-container-two {
+    width: 95%; /* スマホ画面の左右いっぱいに使えるように調整 */
+  }
+
+  .slogan-two h1.slogan-animate {
+    line-height: 2;
+    letter-spacing: 0.05em;
+  }
+}
+
+section .flex-container {
+  padding: 3rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  section .flex-container {
+    flex-direction: column;
+    padding: 2rem 1.25rem;
+    gap: 2rem;
+  }
+}
+
+
+section .slogan-container-one, .slogan-container-two{
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.text-container {
+  line-break: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  padding-left: 6rem;
+}
+
+section img {
+  max-width: 100%;
+}
+
+.welcome-image {
+  max-height: 50vh;
+}
+
+details {
+  padding: 2.5em 2.5em 2.5em 2.5em;
+  border: var(--text-color);
+  font-weight: 500;
+  font-size: 1.25rem;
+
+}
+
+details:hover {
+  cursor: pointer;
+}
+
+.logo {
+  opacity: 0;
+  border-radius: 15%;
+  max-width: 100%;
+  margin-top: 5rem;
+  filter: blur(5px);
+  transform: translateZ(-500%) scaleZ(0);
+  transition: 1s ease-out, opacity 1s ease-out;
+}
+
+.logo.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateZ(0) scaleZ(1);
+}
+
+@media(prefers-reduced-motion) {
+  .logo {
+    transition: none;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-5%);
+  transition: all 1s;
+  transition-timing-function: ease-in;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.slogan-animate {
+  font-family: var(--font-japanese-heading);
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.2;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: loose;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+@media (max-width: 600px) {
+  section .slogan-container {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+}
+
+.slogan-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Below for image scroll effect */
+
+.scroller {
+  display: grid;
+  max-width: 100%;
+  width: 100%;
+  min-block-size: 100vh;
+  place-content: center;
+}
+
+.scroller-inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.scroller-inner img {
+  width: clamp(200px, 40vw, 250px);
+  height: clamp(200px, 40vw, 250px);
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: .5em;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    var(--base-color) 20%,
+    var(--base-color) 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, var(--base-color) 20%, var(--base-color) 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller-inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+section#gallery .text-container {
+  text-align: center;
+}
+
+/* Container to keep the button nicely spaced and centered */
+.instagram-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0;
+  width: 100%;
+}
+
+/* Instagram Brand Gradient Button Styling */
+.cta-instagram-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Smooth spacing between the SVG icon and text string */
+  
+  /* Official Instagram Core Colors Gradient Flow */
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FCAF45);
+  background-size: 110% 110%;
+  
+  color: #ffffff; /* Sharp white text to pop against the deep color blend */
+  text-decoration: none;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  padding: 14px 32px;
+  border-radius: 30px; /* Perfect soft rounded pill shape */
+  box-shadow: 0 4px 14px rgba(225, 48, 108, 0.25); /* Subtle pink-toned brand shadow drop */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+/* Fluid physical feedback hover response */
+.cta-instagram-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.45);
+}
+
+/* Constraint layout settings to align the inline vector graphic */
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* --- Gallery Base Outer Container Layout --- */
+.gallery-wrapper-layout {
+  position: relative;
+  display: flex;
+  flex-direction: row; /* Puts progress track on the left, viewport on the right */
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;      /* Centers the entire component wrapper perfectly */
+  padding: 0 1rem;
+}
+
+/* --- Left-Aligned Vertical Progress Track --- */
+.gallery-progress-track {
+  width: 6px;
+  background: rgba(166, 136, 107, 0.15); /* Light version of --text-color */
+  margin-right: 1.5rem;                  /* Space between indicator and grid */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  align-self: center;
+  height: 400px;                         /* Matches general height constraints */
+}
+
+.gallery-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;                            /* Driven dynamically via JavaScript */
+  background: var(--secondary-color);    /* Your clean beachy blue brand accent */
+  border-radius: 10px;
+  transition: height 0.1s linear;
+}
+
+/* --- The Vertically Snapping Viewport --- */
+.gallery-viewport {
+  flex: 1;
+  height: 550px;                         /* Restricts desktop view height to prevent page overflow */
+  overflow-y: scroll;                    /* Enables internal vertical scrolling */
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;         /* Forces vertical snap targeting */
+  scroll-behavior: smooth;
+  border-radius: 0.75rem;
+  
+  /* Hide scrollbars completely for modern browsers */
+  scrollbar-width: none;                 /* Firefox */
+  -ms-overflow-style: none;              /* IE and Edge */
+}
+
+/* Hide scrollbar completely for Chrome, Safari, and Opera */
+.gallery-viewport::-webkit-scrollbar {
+  display: none;
+}
+.gallery-viewport::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+/* --- 1. Fix the Set Container --- */
+.gallery-set {
+  width: 100%;
+  height: 100%;                          
+  flex-shrink: 0;                        
+  scroll-snap-align: start;              
+  scroll-snap-stop: always;              
+  display: flex;
+  align-items: stretch;                  /* Changed from center to stretch */
+  justify-content: center;
+  box-sizing: border-box;
+  
+  /* Use a clean border or padding to create a hard visual break if needed, 
+     instead of letting the underlying images clip early */
+  padding: 0; 
+}
+
+/* --- Desktop 5-Photo Grid Sizing Update --- */
+.grid-container {
+  margin: 0;                             
+  display: grid;
+  width: 100%;
+  height: 100%;                          /* Full bleed containment to prevent overlaps */
+  grid-template-columns: repeat(4, 1fr);  
+  grid-template-rows: 1fr 1fr;           
+  grid-template-areas: 
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";           
+  gap: 0.75rem;
+  box-sizing: border-box;
+}
+
+.grid-container img {
+  height: 100%;                          
+  width: 100%;                           
+  border-radius: .5em;                   
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.grid-container img:hover {
+  opacity: 0.9;
+}
+
+/* Assign exact grid areas to your images on desktop */
+.grid-container .img-1 { grid-area: img-1; }
+.grid-container .img-2 { grid-area: img-2; }
+.grid-container .img-3 { grid-area: img-3; }
+.grid-container .img-4 { grid-area: img-4; }
+.grid-container .img-5 { grid-area: img-5; }
+
+/* --- Lightbox Modal Styles --- */
+.lightbox-modal {
+  display: none;                         
+  position: fixed;
+  z-index: 9999;                         
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);  
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 85%;
+  object-fit: contain;                   
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- Mobile View Enhancements (Drastic Scaling Under 768px) --- */
+@media (max-width: 768px) {
+  .gallery-wrapper-layout {
+    padding: 0 0.5rem;
+  }
+  
+  .gallery-progress-track {
+    margin-right: 0.75rem;               
+    height: 320px;                       
+  }
+
+  .gallery-viewport {
+    height: 480px;                       
+  }
+
+  /* Overwrite the layout to a perfect 2x2 grid ONLY on mobile viewports */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;    
+    grid-template-areas: 
+      "img-1 img-2"
+      "img-3 img-4";
+    gap: 0.6rem;
+    width: 100%;
+    height: 100%;                        
+    padding: 0.25rem 0;
+  }
+
+  /* Explicitly re-map the grid areas for your classes on mobile */
+  .grid-container .img-1 { grid-area: img-1; }
+  .grid-container .img-2 { grid-area: img-2; }
+  .grid-container .img-3 { grid-area: img-3; }
+  .grid-container .img-4 { grid-area: img-4; }
+
+  /* Enforce smooth containment layout constraints */
+  .grid-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  /* Completely hide the 5th image on phone screens */
+  .grid-container .img-5 {
+    display: none !important;
+  }
+
+  /* Hide the desktop 'X' close button */
+  .lightbox-close {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #instaCode,
+  #instaModal {
+    display: none !important;
+  }
+}
+
+/* Style the Image Used to Trigger the Modal */
+#instaCode {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 3em auto;  
+  display: block;
+
+}
+
+#instaCode:hover {opacity: 0.7;}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  width: min(700px, 92vw);
+  max-height: 85vh;
+  height: auto;
+}
+
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flex-container-about {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 3rem;
+}
+
+.text-container-about {
+    flex: 3; 
+}
+
+.image-container-about {
+    flex: 1; 
+    padding-top: 20px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 768px) {
+    .flex-container-about {
+        flex-direction: column;
+        align-items: center; 
+        padding: 1.5rem;
+    }
+
+    .text-container-about,
+    .image-container-about {
+        flex: none; 
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    .image-container-about {
+        order: -1;
+        margin-bottom: 20px;
+    }
+}
+
+#about .text-container-about {
+  max-width: 680px;
+}
+
+.about-highlights {
+  margin: 1rem 0 1.25rem;
+  padding-left: 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-highlights strong {
+  font-weight: 700;
+}
+
+.about-details {
+  padding: 0;
+  border: none;
+  font-size: 1rem;
+}
+
+.about-details summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem 1rem;
+  border-radius: .75rem;
+  background: rgba(246, 194, 155, 0.25);
+  font-weight: 600;
+}
+
+.about-details summary::-webkit-details-marker { display: none; }
+
+.about-details[open] summary {
+  background: rgba(157, 193, 201, 0.25);
+}
+
+.about-body {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .text-container-about,
+  .image-container-about {
+    max-width: 100% !important;
+  }
+
+  #about p, 
+  #about .about-body {
+    font-size: 1rem;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+}
+
+.about-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.about-highlights li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-highlights li::before {
+    content: "🌺";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+}
+
+#about {
+  color: var(--text-color);
+  min-height: 160px;
+  height: auto; 
+}
+
+
+#pricing-operating-area .flex-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color: var(--text-color);
+  min-height: 160px;
+  height: auto; 
+}
+
+@media (max-width: 768px) {
+  #pricing-operating-area {
+    max-width: 100% !important;
+  }
+}
+
+#pricing-operating-area p {
+  font-size: 1rem;
+}
+
+#menu .flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#menu .text-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.photo-menu-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1200px; /* Restricts maximum stretch on massive ultra-wide monitors */
+  margin: 0 auto;
+
+  /* The magic line: Cards automatically size fluidly between 300px and 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+}
+
+@media (max-width: 600px) {
+  .photo-menu-grid {
+    padding: 12px;
+    gap: 12px;
+  }
+}
+
+.grid-item {
+  display: flex; 
+  border-radius: 8px;
+  overflow: hidden; 
+  color: var(--text-color);
+  min-height: 160px;
+  height: auto; 
+}
+
+/* 1. DESKTOP: Lock the image width so it doesn't blow up */
+.item-image-container {
+  width: 150px;       /* Keeps the image clean and compact on desktop */
+  flex-shrink: 0;     /* Prevents the image from squeezing */
+}
+
+/* 2. DESKTOP: Let the text box take up all the remaining space */
+.item-text-content {
+  flex: 1;            /* Spans across the entire rest of the card */
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  padding: 20px;      /* Slightly more padding for breathing room */
+}
+
+.item-image {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* 3. MOBILE: Keep your stacked layout looking great */
+@media (max-width: 680px) {
+  .grid-item {
+    flex-direction: column;
+  }
+  .item-image-container {
+    width: 100%;      /* Goes back to full width on mobile stack */
+    height: 200px; 
+  }
+}
+
+.item-text-content {
+  flex: 1;
+  min-width: 0; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  padding: 10px;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.item-text-content h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  margin: 0 0 5px 0;
+  font-weight: 400;
+}
+
+.item-text-content p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .grid-item {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .item-image {
+    height: 180px;
+  }
+
+  .item-text-content h3 {
+    font-size: 1.4rem;
+  }
+}
+
+#calendar .flex-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#calendar .calendar-wrapper {
+  margin: 2rem auto 0 auto;
+  max-width: 900px;
+}
+
+.calendar-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+}
+
+.calendar-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+section#faq {
+  background: var(--tertiary-color);
+  border-radius: 2.5rem;
+  padding: 2rem 1rem;
+  margin-bottom: 4rem;
+}
+
+section#faq .flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--text-color);
+  min-height: 160px;
+  height: auto; 
+}
+
+
+#faq .flex-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+section#faq .text-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+section#faq h2 {
+  font-size: 2.2rem;
+  font-family: var(--font-japanese-heading);
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+section#faq details {
+  background: var(--tertiary-color);
+  border-radius: 1.2em;
+  box-shadow: 0 2px 14px -7px rgba(0,0,0,0.03);
+  border: 1px solid #e0e0e0;
+  margin-bottom: 1.45rem;
+  padding: 1.25em 1.75em 1em 1.75em;
+  font-size: 1.1rem;
+  transition: box-shadow 0.18s;
+  cursor: pointer;
+}
+
+section#faq details:hover, section#faq details[open] {
+  box-shadow: 0 4px 24px -12px var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+section#faq summary {
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-size: 1.13rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.16s;
+  position: relative;
+}
+
+section#faq summary::after {
+  content: "➤";
+  font-size: 1.1rem;
+  transform: rotate(90deg);
+  color: var(--secondary-color);
+  margin-left: auto;
+  transition: transform 0.25s;
+}
+
+section#faq details[open] summary::after {
+  transform: rotate(270deg);
+  color: var(--primary-color);
+}
+
+section#faq details p {
+  margin-top: 0.75em;
+  color: #555;
+  line-height: 1.65;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 720px) {
+  section#faq .text-container {
+    max-width: 95vw;
+    padding: 0 2vw;
+  }
+  section#faq {
+    border-radius: 1.2rem;
+  }
+  section#faq details {
+    font-size: 1rem;
+    padding: 1.1em 1em 1em 1em;
+  }
+}
+
+/* Booking Section CTA Cards */
+.booking-section {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.booking-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.booking-header .jp-title {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.booking-subtext {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.booking-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.booking-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 520px;
+  padding: 1.25rem 1.75rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.line-card {
+  background-color: #06C755;
+}
+
+.insta-card {
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.card-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.booking-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.booking-icon-svg {
+  width: 38px;
+  height: 38px;
+  stroke: #ffffff;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex-grow: 1;
+  margin-left: 1.25rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+.qr-preview {
+  width: 52px;
+  height: 52px;
+  background: #ffffff;
+  padding: 3px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Hide QR codes on mobile/tablet screens */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .booking-card {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+.jp-title {
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Tsumami Zaiku "Wa" Traditional Section Styles
+   ========================================================================== */
+#tsumami-zaiku {
+  position: relative;
+  padding: 6rem 1.5rem;
+  background-color: #febe94;
+  background-image: url('https://www.transparenttextures.com/patterns/seigaiha.png'); 
+  overflow: hidden;
+  font-family: 'Shippori Mincho', 'Cormorant Garamond', serif; 
+}
+
+.tsumami-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(247,243,237,0.7) 100%);
+  z-index: 1;
+}
+
+.tsumami-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tsumami-header .tsumami-subtitle {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 0.4em;
+  color: #a67c52; 
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.tsumami-header h2 {
+  font-size: 2.6rem;
+  color: #2c2520; 
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.tsumami-jp-title {
+  font-size: 1.1rem;
+  color: #5c534c;
+  margin-top: 0.75rem;
+  margin-bottom: 3.5rem;
+  letter-spacing: 0.15em;
+}
+
+.tsumami-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* つまみ細工のショーケース（白いカード部分） */
+.tsumami-showcase-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 25px rgba(166, 136, 107, 0.08);
+  border: 1px solid rgba(166, 136, 107, 0.25);
+  width: 100%;
+  max-width: 550px; /* 縦長画像に合わせてバランスの良い幅に固定 */
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+  
+  /* 子要素（画像とボタン）を縦一列にきれいに並べる設定 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem; /* 画像とボタンの間の余白 */
+}
+
+/* 画像ラッパー */
+.tsumami-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid rgba(166, 136, 107, 0.15);
+}
+
+/* つまみ細工の画像自体 */
+.tsumami-showcase-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tsumami-showcase-box:hover .tsumami-showcase-img {
+  transform: scale(1.03);
+}
+
+/* ─── 【重要】崩れていたボタンのスタイル修正 ─── */
+.tsumami-btn {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  width: auto;
+  min-width: 260px; /* ボタンが潰れないように最小の横幅を確保 */
+  padding: 1rem 2.5rem;
+  
+  /* 上品な和テイストの濃い木肌色（ブラウン） */
+  background-color: #8c6239; 
+  color: #ffffff !important; /* テキストを確実に白にする */
+  text-decoration: none;
+  
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  border-radius: 2px;
+  border: 1px solid #8c6239;
+  
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ボタンのホバー（マウスを乗せたとき）のエフェクト */
+.tsumami-btn:hover {
+  background-color: transparent;
+  color: #8c6239 !important;
+  border-color: #8c6239;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(140, 98, 57, 0.15);
+}
+
+/* モバイル（スマホ）用のレスポンシブ微調整 */
+@media (max-width: 768px) {
+  .tsumami-showcase-box {
+    padding: 2rem 1.5rem;
+    gap: 1.75rem;
+  }
+  
+  .tsumami-btn {
+    min-width: 100%; /* スマホ画面ではボタンを押しやすいように横いっぱいに広げる */
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+footer {
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; 
+  margin-top: 1.5rem;
+}
+
+.socials-container .footer-icon-link {
+  display: inline-block;
+  width: 54px; 
+  height: 54px;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.brand-svg-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.socials-container .footer-icon-link:hover {
+  transform: scale(1.15) rotate(12deg);
+}
+/* --- Back to Top Floating Button --- */
+#backToTop {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(157, 193, 201, 0.9); /* matches your palette */
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;              /* hidden by default */
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover (desktop only) */
+#backToTop:hover {
+  transform: translateY(-2px);
+}
+
+/* Show button */
+#backToTop.show {
+  display: block;
+}
+
+/* Slightly larger on mobile tap targets */
+@media (max-width: 768px) {
+  #backToTop {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+
+/* ==========================================
+   NEW REFACTORED STYLES (TEMPORARY OVERRIDES)
+   ========================================== */
+
+/* --- Full-Width Section Layouts --- */
+.section { padding: 80px 20px; width: 100%; }
+.section-alt { background-color: var(--bg-alt); }
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-title { text-align: center; margin-bottom: 40px; }
+.section-title h2 { font-size: 2rem; color: var(--primary-color); margin-bottom: 8px; }
+
+/* --- Services Grid & Cards --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.card-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+.card-content h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--primary-color); }
+.card-content p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1; }
+.card-link { font-weight: bold; color: var(--accent-color); font-size: 0.9rem; }
+
+/* --- Floating CTA --- */
+.floating-cta {
+  font-family: 'Noto Serif JP', "Hiragino Mincho ProN", serif;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #9DC1C9;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}

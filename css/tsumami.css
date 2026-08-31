@@ -1,0 +1,169 @@
+/* --- Traditional Japanese Palette & Typography --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap');
+
+:root {
+  --bg-light: #fcfaf2; /* Washi Off-White */
+  --bg-alt: #f4efe2;
+  --primary-color: #1a2837; /* Deep Indigo / Aizome */
+  --accent-color: #c0392b; /* Vermilion / Shu-iro */
+  --text-main: #2b2b2b;
+}
+
+body {
+  /*font-family: 'Noto Serif JP', "Hiragino Mincho ProN", serif;*/
+  background-color: var(--bg-light);
+}
+
+.tsumami-hero {
+  color: #a6886b;
+  text-align: center;
+  padding: 100px 20px 80px;
+}
+
+.tsumami-hero {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: #a6886b;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tsumami-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+
+.service-card, .glass-content-box {
+  border: 1px solid #e2dacb;
+}
+
+.brochure-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.brochure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brochure-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Night Class Card Accent */
+.brochure-card-night {
+  border-color: #cbd5e1;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.brochure-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  background-color: #f1f5f9;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.tag-night {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.brochure-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.brochure-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #a12900;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-download:hover {
+  background-color: #d83904;
+}
+
+.btn-download-night {
+  background-color: #753e97;
+}
+
+.btn-download-night:hover {
+  background-color: #8861a0;
+}
+
+/* 2-Card Layout Alignment */
+.pricing-grid.two-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 480px));
+  justify-content: center;
+  gap: 30px;
+}
+
+.price-badge-header {
+  padding: 15px 20px;
+  background-color: #fafbfd;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.price-main {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-color, #c0392b);
+  font-family: 'Noto Serif JP', serif;
+}
+
+.price-sub {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-left: 4px;
+}
+
+.package-features {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.package-features li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.package-features li:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Salon Services & Pricing | Halia Beauty Creations</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/salon.css">
+  <script src="main.js"></script>
+</head>
+<body>
+
+  <!-- Floating Book Now Button -->
+  <a href="index.html#booking" class="floating-cta">
+    <span class="cta-text">ご予約はこちら</span>
+  </a>
+
+  <header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo.png" alt="Halia Beauty Creations Logo" class="brand-logo">
+    </a>
+
+      <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="index.html#services">サービス一覧</a></li>
+      <li><a href="photography.html">フォトスタジオ</a></li>
+      <li><a href="salon.html" class="active">ヘアサロン</a></li>
+      <li><a href="tsumami-zaiku.html">つまみ細工</a></li>
+      <li><a href="index.html#gallery">ギャラリー</a></li>
+      <li><a href="index.html#about">オーナー紹介</a></li>
+      <li><a href="index.html#faq">よくある質問</a></li>
+      <li><a href="index.html#calendar">カレンダー</a></li>
+      <li><a href="index.html#booking-form">ご予約</a></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
+    </ul>
+    <ul>
+      <li class="hideOnMobile"><a href="index.html">トップ</a></li>
+      <li class="hideOnMobile"><a href="index.html#services">サービス一覧</a></li>
+      <li class="hideOnMobile"><a href="photography.html">フォトスタジオ</a></li>
+      <li class="hideOnMobile"><a href="salon.html" class="active">ヘアサロン</a></li>
+      <li class="hideOnMobile"><a href="tsumami-zaiku.html">つまみ細工</a></li>
+      <li class="hideOnMobile"><a href="index.html#gallery">ギャラリー</a></li>
+      <li class="hideOnMobile"><a href="index.html#about">オーナー紹介</a></li>
+      <li class="hideOnMobile"><a href="index.html#faq">よくある質問</a></li>
+      <li class="hideOnMobile"><a href="index.html#calendar">カレンダー</a></li>
+      <li class="hideOnMobile"><a href="index.html#booking-form">ご予約</a></li>
+      <li class="hideOnMobile"><a href="index.html#contact">お問い合わせ</a></li>
+      <li class="menu-button" onclick=showSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero salon-hero">
+      <div class="hero-overlay">
+        <div class="container">
+          <h1>ヘアサロン メニュー</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="section brochure-cta-section">
+      <div class="container brochure-flex">
+        <div class="brochure-text">
+          <h3>詳しいメニューをまとめてご覧になりたい方へ</h3>
+          <p>全メニューの料金一覧や詳細を掲載したサロンパンフレット（PDF）をご覧いただけます。</p>
+        </div>
+        <a href="assets/Halia-menu-and-price.pdf" download class="btn-download">
+          </span> サロンパンフレットをダウンロード (PDF)
+        </a>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-title">
+          <h2>メニュー＆料金</h2>
+          <p>料金はすべて税込表示です。</p>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <div class="price-card">
+            <div class="card-header">
+              <h3>CUT</h3>
+            </div>
+            <ul class="price-list">
+              <li>
+                <div class="item-info">
+                  <span class="item-name">カット</span>
+                  <span class="item-desc">学生・大学生　ー¥550</span>
+                  <span class="item-desc">高校生以下　ー¥1，100</span>
+                </div>
+                <span class="item-price">¥4,950</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">顔周りカット</span>
+                </div>
+                <span class="item-price">¥1，650</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">前髪カット</span>
+                </div>
+                <span class="item-price">¥770</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">眉カット</span>
+                </div>
+                <span class="item-price">お問い合わせ</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">大学生デザインカット</span>
+                </div>
+                <span class="item-price">¥4,400</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">高校生以下デザインカット</span>
+                </div>
+                <span class="item-price">¥3，850</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="card-header">
+              <h3>COLOR</h3>
+              <p class="color-conditions">*カットなしやカラー単品の場合は¥1,100シャンプー＆ブロー代</p>
+            </div>
+            <ul class="price-list">
+              <li>
+                <div class="item-info">
+                  <span class="item-name">リタッチ</span>
+                  <span class="item-desc">(再来の方で2ヶ月以内)</span>
+                </div>
+                <span class="item-price">¥4,950</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">フルカラー</span>
+                </div>
+                <span class="item-price">¥6,050</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">マニキュア</span>
+                </div>
+                <span class="item-price">¥6,600</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="card-header">
+              <h3>BLEACH & DESIGN COLOR</h3>
+            </div>
+            <ul class="price-list">
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ハイライト</span>
+                  <span class="item-desc">（Wカラーの場合＋¥6,600〜）</span>
+                </div>
+                <span class="item-price">¥660/1パネル</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ブリーチ全体</span>
+                  <span class="item-desc">（Wカラーの場合＋¥6,600〜）</span>
+                </div>
+                <span class="item-price">¥11,000～</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ブリーチインナー</span>
+                  <span class="item-desc">（Wカラーの場合＋¥6,600〜）</span>
+                </div>
+                <span class="item-price">¥5,500</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ブリーチリタッチ</span>
+                  <span class="item-desc">（3ヶ月以内のご来店のお客様のみ）</span>
+                </div>
+                <span class="item-price">¥8,800</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ブリーチイヤリング</span>
+                  <span class="item-desc">（Wカラーの場合＋¥6,600〜）</span>
+                </div>
+                <span class="item-price">¥3,300</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ブリーチフェイスフレーミング</span>
+                  <span class="item-desc">（Wカラーの場合＋¥6,600〜）</span>
+                </div>
+                <span class="item-price">¥5,500</span>
+              </li><li>
+                <div class="item-info">
+                  <span class="item-name">ブリーチ（パレイヤージュ等のデザイン）</span>
+                  <span class="item-desc">（Wカラーの場合＋¥6,600〜）</span>
+                </div>
+                <span class="item-price">¥8,800〜</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">フォックスカラー</span>
+                  <span class="item-desc">Wカラーの場合+¥6,600～</span>
+                </div>
+                <span class="item-price">お問い合わせ</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">＋デザインカラーの追加メニュー</span>
+                  <span class="item-desc">（2色以上のデザインによっての料金です）</span>
+                </div>
+                <span class="item-price">¥2,200〜</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="card-header">
+              <h3>PERM</h3>
+              <p class="color-conditions">カットと一緒にご予約承ります）</p>
+            </div>
+            <ul class="price-list">
+              <li>
+                <div class="item-info">
+                  <span class="item-name">パーマナチュラル</span>
+                </div>
+                <span class="item-price">¥6,600〜</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">スパイラルパーマやツイストパーマの追加メニュー</span>
+                </div>
+                <span class="item-price">¥2,200〜</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="card-header">
+              <h3>STRAIGHT</h3>
+              <p class="color-conditions">（カットなしの場合＋¥3,300 シャンプー＆ブロー代）</p>
+            </div>
+            <ul class="price-list">
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ストレート全体</span>
+                </div>
+                <span class="item-price">¥16,500</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ストレートリタッチ</span>
+                  <span class="item-desc">（再来の方限定で半年以内）</span>
+                </div>
+                <span class="item-price">¥12,100</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">髪質改善トリートメント</span>
+                  <span class="item-desc">髪の深部まで潤いを補給し、指通りの良い滑らかな髪へ導きます。</span>
+                </div>
+                <span class="item-price">¥3,000</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="card-header">
+              <h3>HAIR TREATMENT</h3>
+              <p class="color-conditions">美容師の現場の声をカタチにした、高濃度なヘアパフォーマンスなアイテムで髪と質感を作り上げます。（カットなしの場合＋¥3,300 シャンプー＆ブロー代）</p>
+            </div>
+            <ul class="price-list">
+              <li>
+                <div class="item-info">
+                  <span class="item-name">髪質改善トリートメント</span>
+                </div>
+                <span class="item-price">¥3,300 / ¥5,500 / ¥6,600 / ¥8,800</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="card-header">
+              <h3>HAIR SET</h3>
+            </div>
+            <ul class="price-list">
+              <li>
+                <div class="item-info">
+                  <span class="item-name">洋装ヘアセット</span>
+                </div>
+                <span class="item-price">¥4,400</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">和装ヘアセット</span>
+                </div>
+                <span class="item-price">¥5,500</span>
+              </li>
+              <li>
+                <div class="item-info">
+                  <span class="item-name">七五三ヘアセット（7歳）</span>
+                </div>
+                <span class="item-price">¥4,950</span>
+              </li>
+                            <li>
+                <div class="item-info">
+                  <span class="item-name">七五三ヘアセット（5歳）</span>
+                </div>
+                <span class="item-price">¥3,850</span>
+              </li>
+                            <li>
+                <div class="item-info">
+                  <span class="item-name">成人式ヘアセット（前撮り）</span>
+                </div>
+                <span class="item-price">¥7,700</span>
+              </li>
+                            <li>
+                <div class="item-info">
+                  <span class="item-name">成人式ヘアセット（当日）</span>
+                </div>
+                <span class="item-price">¥8,250</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="card-header">
+              <h3>HEAD SPA</h3>
+            </div>
+            <ul class="price-list">
+              <li>
+                <div class="item-info">
+                  <span class="item-name">ヘッドスパ5分</span>
+                  <span class="item-desc">5分の極上ヘッドスパ（単品予約できません）</span>
+                </div>
+                <span class="item-price">¥500</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+<div class="option-card">
+  <div class="option-header">
+    <h3>その他 / OPTION</h3>
+  </div>
+  <div class="option-grid">
+    
+    <div class="option-item">
+      <h4 class="option-title">早朝料金</h4>
+      <div class="option-price">¥1,100〜</div>
+      <p class="option-desc">前倒し1時間につき、＋¥1,100</p>
+    </div>
+
+    <div class="option-item">
+      <h4 class="option-title">夜間料金</h4>
+      <div class="option-price">¥1,100〜</div>
+      <p class="option-desc">後ろ倒し1時間につき、＋¥1,100</p>
+    </div>
+
+    <div class="option-item">
+      <h4 class="option-title">パーマ・カラー・ストレート時<br><small>（カットなし）のシャンプー＆ブロー代</small></h4>
+      <div class="option-price">¥1,100</div>
+    </div>
+
+    <div class="option-item">
+      <h4 class="option-title">頭浸浴</h4>
+      <div class="option-price">¥1,650</div>
+      <p class="option-desc">（シャンプー＆ブロー代 ＋¥2,200）</p>
+    </div>
+
+  </div>
+</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  }
+</script>
+
+</body>
+</html>
